@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Klef1s</title>
+  </head>
+  <body>
+    <header>
+      <div class="wrapper">
+        <a href="#auth-log" id="signin" class="head-link login">Войти</a>
+        <a
+          href="#section-profile"
+          id="profile"
+          class="head-link profile"
+          onclick="vis()"
+          >Профиль</a
+        >
+        <a href="" id="logOut" class="head-link logout" onclick="logOut()"
+          >Выйти из аккаунта</a
+        >
+      </div>
+    </header>
+    <main>
+      <section id="section-main" class="main-content">
+        <div class="main-contents container">
+          <div class="header-text">
+            <h1 class="header-title">Образовательный портал НКЭиВТ</h1>
+            <p class="header-subtitle">
+              Информационная система, предназначенная для доступа широкого круга
+              пользователей к информационным ресурсам и услугам образовательного
+              характера с помощью информационно-телекоммуникационной сети.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section id="section-auth" class="main-auth-form">
+        <div id="auth-log" class="register-form-container">
+          <div class="form-title">
+            <h1 class="popup_title">Вход</h1>
+            <a href="" class="popup_close"><img src="cross.svg" /></a>
+          </div>
+          <div class="form-fields">
+            <div class="form-filed">
+              <input
+                id="log"
+                type="text"
+                placeholder="Логин"
+                pattern="^[a-zA-Z0-9]+$"
+              />
+            </div>
+            <div class="form-filed">
+              <input
+                id="pass"
+                type="password"
+                placeholder="Пароль"
+                pattern="(?=^.{8,}$)((?=.\d)|(?=.\W+))(?![.\n])(?=.[A-Z])(?=.[a-z]).*$"
+              />
+            </div>
+          </div>
+          <div class="form-buttons">
+            <button class="button" onclick="sign_in()">Войти</button>
+            <a href="#auth-reg" class="button button-reg">Создать аккаунт</a>
+          </div>
+        </div>
+
+        <div id="auth-reg" class="register-form-container">
+          <div class="form-title">
+            <h1 class="popup_title">Регистрация</h1>
+            <a href="" class="popup_close"><img src="cross.svg" /></a>
+          </div>
+          <div class="form-fields">
+            <div class="form-filed">
+              <input
+                id="log_reg"
+                type="text"
+                placeholder="Логин"
+                pattern="^[a-zA-Z0-9]+$"
+              />
+            </div>
+            <div class="form-filed">
+              <input
+                id="pass_reg"
+                type="password"
+                placeholder="Пароль"
+                pattern="(?=^.{8,}$)((?=.\d)|(?=.\W+))(?![.\n])(?=.[A-Z])(?=.[a-z]).*$"
+              />
+            </div>
+            <div class="form-filed">
+              <input
+                id="repeat_pass_reg"
+                type="password"
+                placeholder="Повторите пароль"
+                pattern="(?=^.{8,}$)((?=.\d)|(?=.\W+))(?![.\n])(?=.[A-Z])(?=.[a-z]).*$"
+              />
+            </div>
+          </div>
+          <div class="form-buttons">
+            <button class="button" onclick="sign_up()">
+              Зарегистрироваться
+            </button>
+            <a href="#auth-log" class="button button-reg"
+              >У меня есть аккаунт</a
+            >
+          </div>
+        </div>
+      </section>
+      <section id="section-adminka" class="main-auth-form form-adminka">
+        <h1 class="popup_title">Админка</h1>
+      </section>
+      <section id="section-profile" class="main-auth-form form-profile">
+        <h1 class="popup_title">Профиль</h1>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
